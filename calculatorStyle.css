@@ -1,96 +1,96 @@
 body{
-    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath opacity=".5" d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z"/%3E%3Cpath d="M6 5V0H5v5H0v1h5v94h1V6h94V5H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
-    background-color: #1A237E;
-    font-family: 'Gugi', cursive;
-  }
-  
-  main{
-    background-color: #455A64;
-    width: 550px;
-    margin: 40px auto 0px auto;
-    padding: 1px 10px;
-    border-radius: 10px;
-  }
-  
-  h1{
-    color: white;
-    text-align: center;
-  }
-  
-  #viewScreen{
-    background-color: #CFD8DC;
-    height: 75px;
-    padding: 10px;
-    margin: 10px 10px 20px 10px;
-    border-radius: 20px;
-  }
-  
-  #currentNumber{
-    font-size: 32px;
-    padding-top: 8px;
-    text-align: right;
-  }
-  
-  #currentMathProblem{
-    text-align: right;
-    color: #90A4AE;
-    padding-top: 2px;
-  }
-  
-  button{
-    font-family: 'Hi Melody', cursive;
-    border-style: none;
-    font-size: 36px;
-    padding: 15px;
-  }
-  
-  #controlPanel{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 80px);
-    margin-bottom: 10px;
-  }
-  
-  .operate{
-    background-color: #263238;
-    color: #B0BEC5;
-    border: 1px solid #B0BEC5;
-  }
-  
-  .num{
-    background-color: #78909C;
-    border: 1px solid #B0BEC5;
-  }
-  
-  #reset{
-    border-top-left-radius: 10px;
-    background-color: #DD2C00;
-    color: white;
-  }
-  
-  #reset:hover{
-    background-color: white;
-    color: black;
-  }
-  
-  #subtract{
-    border-top-right-radius: 10px;
-  }
-  
-  #add{
-    grid-area: 2/4/4/5;
-  }
-  
-  #posNeg{
-    border-bottom-left-radius: 10px;
-  }
-  
-  #equals{
-    grid-area: 4/4/6/5;
-    border-bottom-right-radius: 10px;
-  }
-  
-  button:hover{
-    background-color: #ECEFF1;
-    color: black;
-  }
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath opacity=".5" d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z"/%3E%3Cpath d="M6 5V0H5v5H0v1h5v94h1V6h94V5H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+  background-color: #1A237E;
+  font-family: 'Gugi', cursive;
+}
+
+main{
+  background-color: #455A64;
+  width: 550px;
+  margin: 40px auto 0px auto;
+  padding: 1px 10px;
+  border-radius: 10px;
+}
+
+h1{
+  color: white;
+  text-align: center;
+}
+
+#viewScreen{
+  background-color: #CFD8DC;
+  height: 75px;
+  padding: 10px;
+  margin: 10px 10px 20px 10px;
+  border-radius: 20px;
+}
+
+#currentNumber{
+  font-size: 32px;
+  padding-top: 8px;
+  text-align: right;
+}
+
+#currentMathProblem{
+  text-align: right;
+  color: #90A4AE;
+  padding-top: 2px;
+}
+
+button{
+  font-family: 'Hi Melody', cursive;
+  border-style: none;
+  font-size: 36px;
+  padding: 15px;
+}
+
+#controlPanel{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 80px);
+  margin-bottom: 10px;
+}
+
+.operate{
+  background-color: #263238;
+  color: #B0BEC5;
+  border: 1px solid #B0BEC5;
+}
+
+.num{
+  background-color: #78909C;
+  border: 1px solid #B0BEC5;
+}
+
+#reset{
+  border-top-left-radius: 10px;
+  background-color: #DD2C00;
+  color: white;
+}
+
+#reset:hover{
+  background-color: white;
+  color: black;
+}
+
+#subtract{
+  border-top-right-radius: 10px;
+}
+
+#add{
+  grid-area: 2/4/4/5;
+}
+
+#posNeg{
+  border-bottom-left-radius: 10px;
+}
+
+#equals{
+  grid-area: 4/4/6/5;
+  border-bottom-right-radius: 10px;
+}
+
+button:hover{
+  background-color: #ECEFF1;
+  color: black;
+}

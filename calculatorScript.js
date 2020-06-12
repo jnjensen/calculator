@@ -17,14 +17,19 @@ const oneBtn = document.querySelector("#one");
 const posNegBtn = document.querySelector("#posNeg");
 const zeroBtn = document.querySelector("#zero");
 const decBtn = document.querySelector("#decimal");
-const equalBtn = document.querySelector("#equals");       
+const equalBtn = document.querySelector("#equals"); 
+const numsSearch = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "."];
+const operateSearch = ["+", "-", "/", "*"];      
 var curNum = [];
-var curMathProblem = "";
-var opeartion = "";
+var curMathProblem = [];
+var operation = "";
 
 function numCreate (){
     if (this.value != "." || curNum.includes(".") == false){
         curNum.push(this.value);
+        if ((curNum[0] == 0) && (curNum[1] != ".") && (curNum.length >= 2)){
+            curNum.shift();
+        }
         var x = curNum.join("");
         curNumView.innerHTML = x; 
     } 
@@ -32,7 +37,7 @@ function numCreate (){
 
 function clear () {
     curNum = [];
-    curMathProblem = "";
+    curMathProblem = [];
     operation = "";
     curNumView.innerHTML = "";
     mathProblemView.innerHTML = "";
@@ -43,10 +48,89 @@ function togglePosNeg (){
         curNum.shift();
         var x = curNum.join("");
         curNumView.innerHTML = x;
-    }else{
+    }else if (((curNum[0] != 0) || (curNum.length == 3)) && (curNum.length > 0)){
         curNum.unshift("-");
         var y = curNum.join("");
         curNumView.innerHTML = y;
+    }
+}
+
+function mathing (){
+    var product = 0;
+    var num1 = curMathProblem[0];
+    var num2 = curMathProblem[2];
+    if (operation == "+"){
+        product = (num1 + num2);
+    } else if (operation == "-"){
+        product = (num1 - num2);
+    } else if (operation == "/"){
+        if (num2 == 0){
+            return "Can't Divde By 0!";
+        }
+        product = (parseFloat(num1 / num2));
+    } else if (operation == "*"){
+        product = (num1 * num2);
+    }
+    return product;
+}
+
+function finalEquals (){
+    var numAdd = Number(curNum.join(""));
+    if ((curMathProblem.length >= 2) && (curNum.length > 0)) {
+        curMathProblem.push(numAdd);
+        var total = mathing();
+        curNumView.innerHTML = total;
+        curNum = [];
+        curMathProblem = [];
+        operation = "";
+        mathProblemView.innerHTML = "";
+    }
+}
+
+function operatorAdd (){
+    var numAdd = Number(curNum.join(""));
+    curMathProblem.push(numAdd);
+    if (curMathProblem.length >= 3){
+        var mathingNum = mathing();
+        curMathProblem = [];
+        curMathProblem.push(mathingNum);
+    }  
+    operation = this.value;
+    curMathProblem.push(this.value);
+    var x = curMathProblem.join(" ");
+    mathProblemView.innerHTML = x;
+    curNum = [];
+}
+
+function usingKeys (event){
+    var idx = event.key;
+    console.log(idx);
+    if (numsSearch.includes(idx) == true){
+        if (idx != "." || curNum.includes(".") == false){
+            curNum.push(idx);
+            if ((curNum[0] == 0) && (curNum[1] != ".") && (curNum.length >= 2)){
+                curNum.shift();
+            }
+            var x = curNum.join("");
+            curNumView.innerHTML = x; 
+        } 
+    }else if (operateSearch.includes(idx) == true){
+        var numAdd = Number(curNum.join(""));
+        curMathProblem.push(numAdd);
+        if (curMathProblem.length >= 3){
+            var mathingNum = mathing();
+            curMathProblem = [];
+            curMathProblem.push(mathingNum);
+        }  
+        operation = idx;
+        curMathProblem.push(idx);
+        var y = curMathProblem.join(" ");
+        mathProblemView.innerHTML = y;
+        curNum = [];
+    }else if (idx == "Enter"){
+        finalEquals();
+    }else if ((idx == "Delete") || (idx == "Backspace")){
+        clear();
     }
 }
 
@@ -63,3 +147,9 @@ zeroBtn.addEventListener("click", numCreate);
 decBtn.addEventListener("click", numCreate);
 clearBtn.addEventListener("click", clear);
 posNegBtn.addEventListener("click", togglePosNeg);
+divBtn.addEventListener("click", operatorAdd);
+mulBtn.addEventListener("click", operatorAdd);
+addBtn.addEventListener("click", operatorAdd);
+subBtn.addEventListener("click", operatorAdd);
+equalBtn.addEventListener("click", finalEquals);
+document.addEventListener("keydown", usingKeys);
